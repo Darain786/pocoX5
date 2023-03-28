@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left-container img{
+            width: 50px;
+            height: 60px;
+            border:1px solid rgb(218, 213, 213);
+            padding:2px
+        }
+        .left-container img:hover{
+            border:2px solid rgb(86, 141, 250);
+            cursor: grab;
+           
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            padding:10px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        h2{
+            padding:20px;
+            background-color: rgb(71, 71, 255);
+            color: white;
+            text-align: center;
+            margin-top: -2px;
+        }
+        .main-container{
+            border: 1px solid rgb(218, 213, 213);
+            width: 500PX;
+        }
+    </style>
+    <script>
+       function HoverImage(image){
+        var pic= document.getElementById("pic");
+        switch(image){
+            case 'public/img/poco-1.webp':
+                pic.src='public/img/poco-1.webp';
+            break;
+            case 'public/img/poco-2.webp':
+                pic.src='public/img/poco-2.webp';
+            break;
+            case 'public/img/poco-11.webp':
+                pic.src='public/img/poco-11.webp';
+            break;
+            case 'public/img/poco-4.webp':
+                pic.src='public/img/poco-4.webp';
+            break;
+            case 'public/img/poco-8.webp':
+                pic.src='public/img/poco-8.webp';
+            break;
+            case 'public/img/poco-9.webp':
+                pic.src='public/img/poco-9.webp';
+            break;
+        }
+       }
+    </script>
+</head>
+<body>
+   <div class="main-container">
+       <h2>POCO X5 Pro 5G</h2>
+       <div class="container">
+           <div class="left-container">
+               <div><img src="public/img/poco-1.webp" onmouseover="HoverImage('public/img/poco-1.webp')"></div>
+               <div><img src="public/img/poco-2.webp" onmouseover="HoverImage('public/img/poco-2.webp')"></div>
+               <div><img src="public/img/poco-11.webp"onmouseover="HoverImage('public/img/poco-11.webp')"></div>
+               <div><img src="public/img/poco-4.webp" onmouseover="HoverImage('public/img/poco-4.webp')"></div>
+               <div><img src="public/img/poco-8.webp" onmouseover="HoverImage('public/img/poco-8.webp')"></div>
+               <div><img src="public/img/poco-9.webp" onmouseover="HoverImage('public/img/poco-9.webp')"></div>
+           </div>
+           <div style="text-align:center;">
+               <img src="public/img/poco-1.webp"id="pic">
+           </div>
+       </div>
+   </div>
+</body>
+</html>
